@@ -6,4 +6,53 @@ Various efforts have been developed to prevent crop loss due to diseases. Histor
 
 Smartphones in particular offer very novel approaches to help identify diseases because of their computing power, high-resolution displays, and extensive built-in sets of accessories, such as advanced HD cameras. It is widely estimated that there will be between 5 and 6 billion smartphones on the globe by 2020. At the end of 2015, already 69% of the world's population had access to mobile broadband coverage, and mobile broadband penetration reached 47% in 2015, a 12-fold increase since 2007 (ITU, 2015). The combined factors of widespread smartphone penetration, HD cameras, and high performance processors in mobile devices lead to a situation where disease diagnosis based on automated image recognition, if technically feasible, can be made available at an unprecedented scale. Here, a tomato disease detection model has been created using transfer learning with Inception V3 model.
 
-## 
+## DATA DESCRIPTION:
+The data has different types of diseases for tomato leaves.
+Here goes the list:
+
+* Tomatomosaicvirus
+* Target_Spot
+* Bacterial_spot
+* TomatoYellowLeafCurlVirus
+* Late_blight
+* Leaf_Mold
+* Early_blight
+* Spidermites Two-spottedspider_mite
+* Tomato___healthy
+* Septorialeafspot
+
+LINK TO DATASET: https://www.kaggle.com/kaustubhb999/tomatoleaf
+
+## USING CNN FOR COMPUTER VISION:
+Convolution neural networks are special type of neural networks used in images recognition, images classifications and Objects detections.A convolutional neural network consists of an input and an output layer, as well as multiple hidden layers. The hidden layers of a CNN typically consist of convolutional layers, RELU layer i.e. activation function, pooling layers, fully connected layers and normalization layers.
+
+Convolutional layer is core building block of CNN, it helps with feature detection.
+
+Kernel K is a set of learnable filters and is small spatially compared to the image but extends through the full depth of the input image.
+
+An easy way to understand this is if you were a detective and you are came across a large image or a picture in dark, how will you identify the image?
+
+You will use you flashlight and scan across the entire image. This is exactly what we do in convolutional layer.
+
+Kernel K, which is a feature detector is equivalent of the flashlight on image I, and we are trying to detect feature and create multiple feature maps to help us identify or classify the image.
+
+We have multiple feature detector to help with things like edge detection, identifying different shapes, bends or different colors etc
+![alt text](https://user-images.githubusercontent.com/37455387/58934834-3fabbe00-8789-11e9-81bf-5950375c5757.jpeg)
+
+### TRANSFER LEARNING:
+The deep learning model has been built using transfer learning on the InceptionV3 model.
+
+Transfer learning is a machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+
+It is a popular approach in deep learning where pre-trained models are used as the starting point on computer vision and natural language processing tasks given the vast compute and time resources required to develop neural network models on these problems and from the huge jumps in skill that they provide on related problems.
+
+### ABOUT INCEPTIONv3 MODEL:
+Inception v3 is a convolutional neural network for assisting in image analysis and object detection, and got its start as a module for Googlenet. It is the third edition of Google's Inception Convolutional Neural Network, originally introduced during the ImageNet Recognition Challenge. The design of Inceptionv3 was intended to allow deeper networks while also keeping the number of parameters from growing too large: it has "under 25 million parameters", compared against 60 million for AlexNet.
+
+The original name (Inception) was codenamed this way after a popular "'we need to go deeper' internet meme" went viral, quoting a phrase from Inception film of Christopher Nolan.
+
+ARCHITECTURE OF INCEPTIONV3:
+![alt text](https://production-media.paperswithcode.com/methods/inceptionv3onc--oview_vjAbOfw.png)
+
+### PERFROMANCE:
+The model was able to achieve an overall accuracy of 88%.
